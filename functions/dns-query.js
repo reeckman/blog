@@ -10,7 +10,7 @@ export async function onRequest(context) {
   // 1. 获取上游 DoH 服务器地址
   // 从 Cloudflare Pages 的环境变量 `UPSTREAM_DOH_SERVER` 获取
   // 如果未设置，则默认使用 Cloudflare 的 DoH 服务
-  const upstreamDohServer = env.UPSTREAM_DOH_SERVER || 'https://1.1.1.1/dns-query';
+  const upstreamDohServer = env.UPSTREAM_DOH_SERVER || 'https://doh.dnsfilter.com/dns-query​';
 
   // 2. 构造转发到上游的请求
   const url = new URL(request.url);
